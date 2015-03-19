@@ -5,11 +5,12 @@ system 'clear'
 
 def raise_and_rescue
   begin
+    thingy = gets.chomp
     puts 'I am before the raise.'
-    raise 'A super not awesome catastroflucked error has occurred.'
+    raise 'A super not awesome catastroflucked error has occurred.' if thingy == "sup"
     puts 'I am after the raise.'
   rescue
-    puts 'I am rescued.'
+    puts 'I am rescued. YAY!!!'
   end
   puts 'I am after the begin block.'
 end
@@ -26,11 +27,13 @@ raise_and_rescue
 
 class Name
 
-  attr_reader :first, :last
+  # attr_reader :first, :last
   # When trying to set a first name, enforce rules about it.
   binding.pry
-  def first=(first)
+  def first
+    p "b4 if"
     if first == nil or first.size == 0
+      p "in the if"
       raise ArgumentError.new('Everyone must have a first name.')
     end
     first = first.dup
@@ -40,15 +43,19 @@ class Name
 
 end
 
+fred = Name.new
+
+# fred.first(1,2,3)
+
 name_container = []
 
 10.times { name_container << Name.new }
 
-p "+" * 80
+p "^" * 80
 p name_container
-p "+" * 80
+p "=" * 80
 pp name_container
-p "+" * 80
+p "!" * 80
 ap name_container
 p "+" * 80
 
