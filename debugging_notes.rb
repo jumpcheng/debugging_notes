@@ -1,3 +1,4 @@
+
 def raise_and_rescue
   begin
     puts 'I am before the raise.'
@@ -8,4 +9,5 @@ def raise_and_rescue
   end
   puts 'I am after the begin block.'
 end
+
 raise_and_rescue
