@@ -59,13 +59,13 @@ name_container = []
 
 10.times { name_container << Name.new }
 
-# p "^" * 80
-# p name_container
-# p "=" * 80
-# pp name_container
-# p "!" * 80
-# ap name_container
-# p "+" * 80
+p "^" * 80
+p name_container
+p "=" * 80
+pp name_container
+p "!" * 80
+ap name_container
+p "+" * 80
 
 
 
