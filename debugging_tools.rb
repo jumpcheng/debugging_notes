@@ -1,23 +1,38 @@
+# Awesomeprint can help make complex data stucts easier to read
+# Also USE IRB!!! It is literally made for testing stuff like this
+# irb -r ./ex5.rb
 
-
-require 'awesome_print'
+# require 'awesome_print'
 require 'pp'
 require 'pry-byebug'
+
+crazh_hash = [name: "Topher", classification: "nerd", "an array for some reason" => [1,2,3]]
+crazy_data = [crazh_hash, "other-stuff", [1,2,["a", "b"]]]
+
+# Regular Print
+# p crazy_data
+
+# Pretty Print
+# pp crazy_data
+
+# Awesome Print
+# ap crazy_data
+
 
 
 # system 'clear'
 
-def raise_and_rescue
-  begin
-    thingy = gets.chomp
-    puts 'I am before the raise.'
-    raise 'A super not awesome catastroflucked error has occurred.' if thingy == "sup"
-    puts 'I am after the raise.'
-  rescue
-    puts 'I am rescued. YAY!!!'
-  end
-  puts 'I am after the begin block.'
-end
+# def raise_and_rescue
+#   begin
+#     thingy = gets.chomp
+#     puts 'I am before the raise.'
+#     raise 'A super not awesome catastroflucked error has occurred.' if thingy == "sup"
+#     puts 'I am after the raise.'
+#   rescue
+#     puts 'I am rescued. YAY!!!'
+#   end
+#   puts 'I am after the begin block.'
+# end
 
 # raise_and_rescue
 
@@ -29,51 +44,51 @@ end
 
 
 
-class Name
+# class Name
 
-  attr_accessor :name, :counter
+#   attr_accessor :name, :counter
 
-  def initialize
-    @name = ""
-    @counter = 0
-  end
+#   def initialize
+#     @name = ""
+#     @counter = 0
+#   end
 
   # binding.pry
-  def count_me
-    until @counter == 5
-      # binding.pry
-      puts "Feed ME!!"
-      @counter += 1
-    end
-  end
+#   def count_me
+#     until @counter == 5
+#       # binding.pry
+#       puts "Feed ME!!"
+#       @counter += 1
+#     end
+#   end
 
-end
+# end
 
-fred = Name.new
+# fred = Name.new
 # jan = Name.new(name: "jan")
 
 
-fred.count_me
+# fred.count_me
 
-name_container = []
+# name_container = []
 
-10.times { name_container << Name.new }
+# 10.times { name_container << Name.new }
 
-p "^" * 80
-p name_container
-p "=" * 80
-pp name_container
-p "!" * 80
-ap name_container
-p "+" * 80
-
-
+# p "^" * 80
+# p name_container
+# p "=" * 80
+# pp name_container
+# p "!" * 80
+# ap name_container
+# p "+" * 80
 
 
 
 
-words_to_sample = %w[JibJab Dodad Whodhingy Thingermajig Flipflops FLapjacks bug Debug important Ruby Stuff to remember]
-some_array = Array.new(10) { Array.new(10) {words_to_sample.sample} }
+
+
+# words_to_sample = %w[JibJab Dodad Whodhingy Thingermajig Flipflops FLapjacks bug Debug important Ruby Stuff to remember]
+# some_array = Array.new(10) { Array.new(10) {words_to_sample.sample} }
 
 # p "*" * 80
 # p some_array
@@ -90,9 +105,9 @@ some_array = Array.new(10) { Array.new(10) {words_to_sample.sample} }
 
 
 
-some_hash = {}
+# some_hash = {}
 
-words_to_sample.each_with_index { |item, idx| some_hash[item.to_sym] = idx}
+# words_to_sample.each_with_index { |item, idx| some_hash[item.to_sym] = idx}
 
 # p "~" * 80
 # p some_hash
