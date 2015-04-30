@@ -1,12 +1,10 @@
-# Awesomeprint can help make complex data stucts easier to read
-# Also USE IRB!!! It is literally made for testing stuff like this
-# irb -r ./ex5.rb
+# Returning from within multiple blocks can be tricky in Ruby.
+# But implicit return helps. The last statement becomes
+# the return value, remove explicit returns to resolve.
 
 
-crazh_hash = [name: "Topher", classification: "nerd", "an array for some reason" => [1,2,3]]
-crazy_data = [crazh_hash, "other-stuff", [1,2,["a", "b"]]]
-
-# p crazy_data
-
-# require 'awesome_print'
-# ap crazy_data
+p (1..8).collect { |num1|
+  (1...num1).collect { |num2|
+    return 0 if num1 != num2
+  }
+}.flatten

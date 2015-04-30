@@ -2,12 +2,12 @@
 # Also USE IRB!!! It is literally made for testing stuff like this
 # irb -r ./ex5.rb
 
-# require 'awesome_print'
+require 'awesome_print'
 require 'pp'
 require 'pry-byebug'
 
-crazh_hash = [name: "Topher", classification: "nerd", "an array for some reason" => [1,2,3]]
-crazy_data = [crazh_hash, "other-stuff", [1,2,["a", "b"]]]
+crazh_hash = {fix_all_the_things: "Topher", classification: "nerd", "rando_array" => [1,2,3]}
+crazy_data = [crazh_hash, "other-stuff",true, nil, nil, [1,2,[:a, :b, "c"]]]
 
 # Regular Print
 # p crazy_data
@@ -22,19 +22,20 @@ crazy_data = [crazh_hash, "other-stuff", [1,2,["a", "b"]]]
 
 # system 'clear'
 
-# def raise_and_rescue
-#   begin
-#     thingy = gets.chomp
-#     puts 'I am before the raise.'
-#     raise 'A super not awesome catastroflucked error has occurred.' if thingy == "sup"
-#     puts 'I am after the raise.'
-#   rescue
-#     puts 'I am rescued. YAY!!!'
-#   end
-#   puts 'I am after the begin block.'
-# end
+def raise_and_rescue
+  begin
+    print 'I can has nom nom :> '
+    thingy = gets.chomp
+    puts 'I am before the raise.'
+    raise 'A super not awesome catastrofudge error has occurred.' unless thingy == ""
+      puts 'I am after the raise.'
+    # rescue
+      # puts 'I am rescued. YAY!!!'
+  end
+  puts 'I am after the begin block.'
+end
 
-# raise_and_rescue
+raise_and_rescue
 
 
 
