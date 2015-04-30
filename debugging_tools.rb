@@ -31,6 +31,8 @@ def raise_and_rescue
       puts 'I am after the raise.'
     # rescue
       # puts 'I am rescued. YAY!!!'
+    else
+      puts "I run if there is no error but I'm totes optional."
   end
   puts 'I am after the begin block.'
 end

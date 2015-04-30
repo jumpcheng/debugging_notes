@@ -4,6 +4,7 @@
 
 
 p (1..8).collect { |num1|
+  raise
   (1...num1).collect { |num2|
     return 0 if num1 != num2
   }
