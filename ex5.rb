@@ -3,7 +3,7 @@
 # irb -r ./ex5.rb
 
 
-crazh_hash = [name: "topher", classification: "nerd", "an array for some reason" => [1,2,3]]
+crazh_hash = [name: "Topher", classification: "nerd", "an array for some reason" => [1,2,3]]
 crazy_data = [crazh_hash, "other-stuff", [1,2,["a", "b"]]]
 
 # p crazy_data

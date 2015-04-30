@@ -2,7 +2,7 @@ Sometimes you will close a tab without finishing a process.
 Just because you can't see it doesn't mean it's not there (just like ghosts)
 Let's learn how to kill a process like the cool kids
 
-ps -A # This will give you the list of all processes runing on your machine
+ps -A # This will give you the list of all processes running on your machine
 
 | # This is a pipe it will take the OUTPUT of the last command and send it as an argument to the next command
 
