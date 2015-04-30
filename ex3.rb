@@ -1,5 +1,5 @@
 # Spelling is hard, READ THE ERROR MESSAGE
 
-require 'awesome_print'
+require 'awsome_print'
 array = Array (0..20)
 ap array

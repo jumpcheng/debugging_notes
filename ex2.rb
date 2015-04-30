@@ -10,4 +10,4 @@ end
 
 hunter = Hunter.new("Hunter")
 
-puts hunter.methodthatithinkexits
+puts hunter.method_that_i_think_exists
